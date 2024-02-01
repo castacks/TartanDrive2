@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "icon" href = "assets/title_image.png" type = "image/x-icon">
+  <!-- TODO -->
+
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TartanDrive Test ">
+  <meta name="keywords" content="TartanDrive, Dataset, ATV, Multi-Modal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/Thumbnail.png" /> <!-- TODO -->
+  <title>TartanDrive 2.0 </title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://matthewjsiv.github.io/tdrive_test.github.io/"> <!-- TODO -->
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">TartanDrive 2.0: More Modalities and Better Infrastructure to Further Self-Supervised Learning Research in Off-Road Driving Tasks</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://matthewjsiv.github.io/">Matthew Sivaprakasam</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.parvmaheshwari.com/">Parv Maheshwari</a><sup>2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://www.mateoguaman.com/">Mateo Guaman Castro</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://striest.github.io/">Samuel Triest</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://matthewjsiv.github.io/">Micah Nye</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="https://theairlab.org/team/stevenw/">Steve Willits</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://theairlab.org/team/andrews/">Andrew Saba</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="http://www.wangwenshan.com/">Wenshan Wang</a><sup>1</sup>,</span>
+              <span class="author-block">
+              <a href="https://theairlab.org/">Sebastian Scherer</a><sup>1</sup>,</span>
+
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Carnegie Mellon University</a>,
+              <sup>2</sup>IIT-Kharagpur</a>,
+              <sup>3</sup>University of Pittsburgh</a>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="assets/TartanDrive_2_0_ICRA_2024.pdf"
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1xcdua9rlwqvnU07zmXMaTQePvS4QqYlf/view?usp=sharing"
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/castacks/tartan_drive_2.0"
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="fa fa-globe"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="#interactive_demo"
+                   class="external-link button is-normal">
+                  <span class="icon">
+                      <i class="fa fa-search"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
+
+
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal" disabled="true">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div> -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip1_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip2_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip3_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip4_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip5_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip6_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip8_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./assets/tease_videos/clip10_bb.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!-- <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+        <img source src="assets/title_fig_brighter.png" />
+
+      <h2 class="subtitle has-text-centered">
+        <span class="coolname">TartanDrive 2.0</span> <span> provides <i>more modalities</i> and the <i>infrastructure</i> to facilitate self-supervised learning.</span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          We present TartanDrive 2.0, a large-scale off-road driving dataset for self-supervised learning tasks. In 2021 we released TartanDrive 1.0, which is one of the largest datasets for off-road terrain. As a follow-up to our original dataset, we collected seven hours of data at speeds of up to 15m/s with the addition of three new LiDAR sensors alongside the original camera, inertial, GPS, and proprioceptive sensors. We also release the tools we use for collecting, processing, and querying the data, including our metadata system designed to further the utility of our data. Custom infrastructure allows end users to reconfigure the data to cater to their own platforms. These tools and infrastructure alongside the dataset are useful for a variety of tasks in the field of off-road autonomy and, by releasing them, we encourage collaborative data aggregation. These resources lower the barrier to entry to utilizing large-scale datasets, thereby helping facilitate the advancement of robotics in areas such as self-supervised learning, multi-modal perception, inverse reinforcement learning, and representation learning.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <a id="overview_video"></a>
+          <iframe
+            src="./data/">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div> -->
+    <!--/ Paper video. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <a id="interactive_demo"></a>
+        <h2 class="title is-3">Explore the Dataset!</h2>
+        <div class="content has-text-justified">
+        <p>
+          Click on any of the orange points to see an example data point from its corresponding area. The 3D data (such as the pointcloud) is interactive!
+          <!-- Simply click on any point on the query trajectory (upper left), and observe its best retrieval and similarity heatmap on the database trajectory (upper right).
+          Use the drop-down menu to switch to a different environment.
+          The corresponding query and the best retrieval image is visualized at the lower left and lower right respectively.
+          Points that are identified by &#11088 on the database trajectory indicate the best retrieval.
+          Yellow indicates higher similarity in the database trajectory (upper right). -->
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="columns is-centered">
+
+      <div class="control-row">
+        <select class="trajectorydata">
+        </select>
+      </div>
+
+    </div> -->
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <div id="myPlot"></div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">PointCloud</h2>
+          <div id="myPlot3D"></div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">Odometry</h2>
+          <div id="OdomPlot"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">FPV Image</h2>
+        <img id="fpv_image" src = "data/0/image_left_color/0.png" width="500">
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">RGB BEV Image</h2>
+        <img id="bev_image" src = "data/0/rgb_map/0.png" width="250">
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">Ground Plane</h2>
+          <div id="GroundPlane"></div>
+        </div>
+      </div>
+
+      <script src = "demo/plot.js"></script>
+
+    </div>
+
+
+
+    <p></p>
+    </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ITo8rMInatk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      </div> -->
+        <!--<iframe src="https://drive.google.com/file/d/1xcdua9rlwqvnU07zmXMaTQePvS4QqYlf/preview" width="640" height="480" allow="autoplay"></iframe>-->
+        <iframe src="https://drive.google.com/file/d/1J-KePd_W2gOLecS1YwolOlKhKFw3ANbF/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+  </div>
+  </div>
+  <!--Paper video-->
+
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">System Overview</h2>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src = "assets/platform.png">
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <img src = "assets/vicky_cropped_new.gif">
+        </div>
+      </div>
+
+      </div>
+      <p>We provide a pointcloud scan of the vehicle so that users may take their own additional measurements as desired.</p>
+    </div>
+
+  </div>
+</section>
+
+<script type="text/javascript">
+  $(function() {
+  var screenWidth = $(window).width();
+  if (screenWidth >= 800) {
+    $('#gpt-video-1').attr('autoplay', 'autoplay');
+  }
+  if (screenWidth >= 800) {
+    $('#gpt-video-2').attr('autoplay', 'autoplay');
+  }
+  if (screenWidth >= 800) {
+    $('#click-query-icl').attr('autoplay', 'autoplay');
+  }
+});
+</script>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>
+      <!-- @article{keetha2023anyloc,
+        title={AnyLoc: Towards Universal Visual Place Recognition},
+        author={Keetha, Nikhil and Mishra, Avneesh and Karhade, Jay and Jatavallabhula, Krishna Murthy and Scherer, Sebastian and Krishna, Madhava and Garg, Sourav},
+        journal={arXiv preprint arXiv:2308.00688},
+        year={2023}
+      } -->
+      add when arxiv is up
+    </code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website adapted from the Nerfies templates, which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            If you use the <a href="https://github.com/AnyLoc/AnyLoc.github.io">source code</a> of this website,
+            please also link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a> in your footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
