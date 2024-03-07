@@ -26,6 +26,15 @@ let colors;
 // let HOME_DIR = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/';
 let HOME_DIR = 'https://theairlab.org/TartanDrive2/data/';
 
+async function replaceZerosWithNaN(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] === 0.0) {
+        arr[i][j] = NaN;
+      }
+    }
+  }
+}
 
 async function load_arr()
 {
@@ -535,6 +544,7 @@ async function setTrajectoryPlot(chosen_index)
           new_cloud = await load_cloud(cloud_dir);
           // console.log(new_cloud)
           //set plot layout
+          replaceZerosWithNaN(new_cloud['data']);
           var trace1 = {
               z: new_cloud['data'],
               type: 'surface',
@@ -587,7 +597,8 @@ async function setTrajectoryPlot(chosen_index)
                     // showticklabels: false
                   },
                   zaxis: {
-                    range: [-10,10],
+                    // range: [-10,10],
+                    autorange: true,
                     showgrid: false,
                     zeroline: false,
                     showline: false,
