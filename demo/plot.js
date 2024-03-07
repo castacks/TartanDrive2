@@ -23,10 +23,14 @@ let top_retrieval_array_2;
 
 let colors;
 
+// let HOME_DIR = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/';
+let HOME_DIR = 'https://theairlab.org/TartanDrive2/data/';
+
+
 async function load_arr()
 {
-    let xarray_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/trajectory_data/x.json');
-    let yarray_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/trajectory_data/y.json');
+    let xarray_file = await fetch(HOME_DIR + 'trajectory_data/x.json');
+    let yarray_file = await fetch(HOME_DIR + 'trajectory_data/y.json');
 
     let xArray_json = await xarray_file.json();
     let yArray_json = await yarray_file.json();
@@ -49,7 +53,7 @@ async function setGridMap(chosen_index)
 
   let area = 0
   // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-  let cloud_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/full_cloud/0.json';
+  let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/0.json';
   new_cloud = await load_cloud(cloud_dir);
   // console.log(new_cloud)
   //set plot layout
@@ -125,7 +129,7 @@ async function set3DPlot(chosen_index)
 
   let area = 0
   // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-  let cloud_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/full_cloud/0.json';
+  let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/0.json';
   new_cloud = await load_cloud(cloud_dir);
   // console.log(new_cloud)
   //set plot layout
@@ -216,10 +220,10 @@ async function setOdomPlot(chosen_index)
 
   let area = 0
   // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-  let so_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/super_odom/odometry.json';
+  let so_dir = HOME_DIR + area.toString() + '/super_odom/odometry.json';
   so_traj = await load_cloud(so_dir);
 
-  let tartanvo_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/tartanvo_odom/odometry.json';
+  let tartanvo_dir = HOME_DIR + area.toString() + '/tartanvo_odom/odometry.json';
   tartanvo_traj = await load_cloud(tartanvo_dir);
   // console.log(new_cloud)
   //set plot layout
@@ -356,7 +360,7 @@ async function setTrajectoryPlot(chosen_index)
           },
         images: [
             {
-                "source": "https://matthewjsiv.github.io/tdrive_test.github.io/data/gascola_earth.png",
+                "source": HOME_DIR + '/gascola_earth.png',
                 "xref": "x",
                 "yref": "y",
                 "x": 0,
@@ -433,7 +437,8 @@ async function setTrajectoryPlot(chosen_index)
       let area = data.points[0].pointNumber;
 
       // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-      let cloud_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/full_cloud/0.json';
+      let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/0.json';
+      console.log(cloud_dir)
       new_cloud = await load_cloud(cloud_dir);
       // console.log(new_cloud)
       //set plot layout
@@ -523,10 +528,10 @@ async function setTrajectoryPlot(chosen_index)
 
           let area = data.points[0].pointNumber;
           // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-          let so_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/super_odom/odometry.json';
+          let so_dir = HOME_DIR + area.toString() + '/super_odom/odometry.json';
           so_traj = await load_cloud(so_dir);
 
-          let tartanvo_dir = 'https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/tartanvo_odom/odometry.json';
+          let tartanvo_dir = HOME_DIR + area.toString() + '/tartanvo_odom/odometry.json';
           tartanvo_traj = await load_cloud(tartanvo_dir);
           // console.log(new_cloud)
           //set plot layout
