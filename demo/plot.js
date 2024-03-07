@@ -53,12 +53,12 @@ async function setGridMap(chosen_index)
 
   let area = 0
   // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-  let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/0.json';
+  let cloud_dir = HOME_DIR + area.toString() + '/local_gridmap/' + area.toString() + '.json';
   new_cloud = await load_cloud(cloud_dir);
   // console.log(new_cloud)
   //set plot layout
   var trace1 = {
-      z: [[1.0,1.0,1.0,1.0,1.0,1.0,1.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0],[1.0,1.0,1.0,1.0,1.0,1.0,1.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0],[1.0,1.0,1.0,1.0,1.0,1.0,1.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0]],
+      z: new_cloud['data'],
       type: 'surface',
       colorscale: 'Viridis',
       showscale: false
@@ -129,7 +129,7 @@ async function set3DPlot(chosen_index)
 
   let area = 0
   // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-  let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/0.json';
+  let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/' + area.toString() + '.json';
   new_cloud = await load_cloud(cloud_dir);
   // console.log(new_cloud)
   //set plot layout
@@ -412,7 +412,7 @@ async function setTrajectoryPlot(chosen_index)
 
         const q_image = document.getElementById("fpv_image");
 
-        let fpv_path = dir + "/image_left_color/0.png";
+        let fpv_path = dir + "/image_left_color/" + area.toString() + ".png";
         q_image.src =  fpv_path;
         q_image.style.display = "block";
     });
@@ -425,7 +425,7 @@ async function setTrajectoryPlot(chosen_index)
 
         const q_image = document.getElementById("bev_image");
 
-        let fpv_path = dir + "/rgb_map/0.png";
+        let fpv_path = dir + "/rgb_map/" + area.toString() + ".png";
         q_image.src =  fpv_path;
         // db_image.style.display = "block";
     });
@@ -437,7 +437,7 @@ async function setTrajectoryPlot(chosen_index)
       let area = data.points[0].pointNumber;
 
       // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
-      let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/0.json';
+      let cloud_dir = HOME_DIR + area.toString() + '/full_cloud/' + area.toString() + '.json';
       console.log(cloud_dir)
       new_cloud = await load_cloud(cloud_dir);
       // console.log(new_cloud)
@@ -523,6 +523,89 @@ async function setTrajectoryPlot(chosen_index)
 
       Plotly.react('myPlot3D', data, layout);
         });
+
+
+        myPlot.on('plotly_click',async function(data){
+
+          let area = data.points[0].pointNumber;
+
+          // let pts_file = await fetch('https://matthewjsiv.github.io/tdrive_test.github.io/data/' + area.toString() + '/pc/0.json');
+          let cloud_dir = HOME_DIR + area.toString() + '/local_gridmap/' + area.toString() + '.json';
+          // console.log(cloud_dir)
+          new_cloud = await load_cloud(cloud_dir);
+          // console.log(new_cloud)
+          //set plot layout
+          var trace1 = {
+              z: new_cloud['data'],
+              type: 'surface',
+              colorscale: 'Viridis',
+              showscale: false
+          };
+
+            var data = [trace1];
+
+
+            var layout = {
+                autosize: true,
+                width: 250,
+                height: 250,
+                margin: {
+                    l: 0,
+                    r: 0,
+                    b: 0,
+                    t: 0,
+                    pad: 0
+                  },
+                title:'GroundPlane',
+                hovermode:false,
+                scene: {
+                  camera: {
+                    // center:{x:0,y:0,z:-.3},
+                    eye:{x:-1.35,y:0,z:.75},
+                    // up:{x:-.8,y:0,z:1}
+                  },
+                xaxis: {
+                    autorange: true,
+                    showgrid: false,
+                    zeroline: false,
+                    showline: false,
+                    autotick: false,
+                    ticks: '',
+                    visible:false,
+                    showspikes:false
+                    // showticklabels: false
+                  },
+                  yaxis: {
+                    autorange: true,
+                    showgrid: false,
+                    zeroline: false,
+                    showline: false,
+                    autotick: false,
+                    ticks: '',
+                    visible:false,
+                    showspikes:false
+                    // showticklabels: false
+                  },
+                  zaxis: {
+                    range: [-10,10],
+                    showgrid: false,
+                    zeroline: false,
+                    showline: false,
+                    autotick: false,
+                    ticks: '',
+                    visible:false,
+                    showspikes:false
+                    // showticklabels: false
+                  }
+                }
+            };
+
+
+
+          Plotly.react('GroundPlane', data, layout);
+            });
+
+
 
         myPlot.on('plotly_click',async function(data){
 
