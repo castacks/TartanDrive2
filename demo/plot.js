@@ -333,10 +333,10 @@ async function setTrajectoryPlot(chosen_index)
     };
 
     var trace2 = {
-        // x: x_array,
-        // y: y_array,
-        x: [220,260],
-        y: [544,100],
+        x: x_array,
+        y: y_array,
+        // x: [220,260],
+        // y: [544,100],
         mode: 'markers',
         marker: {
             size: 22,
