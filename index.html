@@ -348,13 +348,93 @@
         <h2 class="title is-3">Explore the Dataset!</h2>
         <div class="content has-text-justified">
         <p>
-          To view the demo, please visit this website on a device with a larger screen.
+          To view the demo, please visit this website on a device with a larger screen. (If you are on a larger screen, increase the size of this window and then refresh).
         </p>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="container is-max-desktop blockMobile">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <a id="interactive_demo"></a>
+        <h2 class="title is-3">Explore the Dataset!</h2>
+        <div class="content has-text-justified">
+        <p>
+          Click on any of the orange points to see an example data point from its corresponding area. The 3D data (such as the pointcloud) is interactive!
+          <!-- Simply click on any point on the query trajectory (upper left), and observe its best retrieval and similarity heatmap on the database trajectory (upper right).
+          Use the drop-down menu to switch to a different environment.
+          The corresponding query and the best retrieval image is visualized at the lower left and lower right respectively.
+          Points that are identified by &#11088 on the database trajectory indicate the best retrieval.
+          Yellow indicates higher similarity in the database trajectory (upper right). -->
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="columns is-centered">
+
+      <div class="control-row">
+        <select class="trajectorydata">
+        </select>
+      </div>
+
+    </div> -->
+
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <div id="myPlot"></div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">PointCloud</h2>
+          <div id="myPlot3D"></div>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">Odometry</h2>
+          <div id="OdomPlot"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">FPV Image</h2>
+        <img id="fpv_image" src = "data/0/image_left_color/0.png" width="500">
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">RGB BEV Image</h2>
+        <img id="bev_image" src = "data/0/rgb_map/0.png" width="250">
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+          <h2 class="title is-4">Ground Plane</h2>
+          <div id="GroundPlane"></div>
+        </div>
+      </div>
+
+      <script src = "demo/plot.js"></script>
+
+    </div>
+
+    </div>
 </section>
 
 <section class="hero is-light">
