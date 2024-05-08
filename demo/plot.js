@@ -739,4 +739,6 @@ setOdomPlot(1);
 setGridMap(1);
 }
 
+if (window.innerWidth >= 780){
 setup_demo();
+}
