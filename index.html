@@ -43,7 +43,27 @@
   <script src="./static/js/index.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-  <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+  <style>
+    .blockMobile {
+      display: none; /* Hide the component by default */
+    }
+
+    @media only screen and (min-width: 768px) {
+      .blockMobile {
+        display: block; /* Show the component for screen width 768px and above (desktop) */
+      }
+    }
+
+    .showMobile {
+      display: none; /* Hide the component by default */
+    }
+
+    @media only screen and (max-width: 768px) {
+      .showMobile {
+        display: block; /* Show the component for screen width 768px and above (desktop) */
+      }
+    }
+  </style>
 
 </head>
 <body>
@@ -289,7 +309,6 @@
   </div>
 </section>
 
-<div class="hidden-sm">
 <section class="hero is-small is-light">
   <div class="hero-body">
   <div class="container is-max-desktop">
@@ -320,10 +339,23 @@
   </div> -->
     <!--/ Paper video. -->
 </section>
-</div>
 
 <section class="section">
-  <div class="container is-max-desktop hidden-sm hidden-xs">
+  <div class="container is-max-desktop showMobile">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <a id="interactive_demo"></a>
+        <h2 class="title is-3">Explore the Dataset!</h2>
+        <div class="content has-text-justified">
+        <p>
+          To view the demo, please visit this website on a device with a larger screen.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-max-desktop blockMobile">
 
     <div class="columns is-centered has-text-centered">
       <div class="column">
